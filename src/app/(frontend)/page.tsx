@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -9,9 +9,6 @@ import './styles.css'
 import Countdown from '@/components/countdown/countdown'
 
 export default async function HomePage() {
-  const launchDate = new Date()
-  launchDate.setDate(launchDate.getDate() + 7)
-
   return (
     <div className="relative h-[100vh] w-full overflow-hidden">
       {/* Background 2x2 grid */}
@@ -68,10 +65,10 @@ export default async function HomePage() {
       {/* Bottom dark vignette */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
 
-      {/* Top content with glassmorphism */}
-      <div className="absolute inset-x-0 top-0 h-1/2 flex flex-col items-center justify-center gap-2 sm:gap-3 px-3 sm:px-6 text-center">
+      {/* Main content with glassmorphism - centered on mobile/tablet, top on desktop */}
+      <div className="absolute inset-0 lg:inset-x-0 lg:top-0 lg:h-1/2 flex flex-col items-center justify-center gap-2 sm:gap-3 px-3 sm:px-6 text-center">
         <div
-          className="w-full max-w-[95%] sm:max-w-3xl p-4 sm:p-6 rounded-xl sm:rounded-2xl border backdrop-blur-md"
+          className="w-full max-w-[95%] sm:max-w-3xl p-4 sm:p-6 rounded-xl sm:rounded-2xl border backdrop-blur-md mb-4 md:mb-8"
           style={{
             background: 'var(--glass-bg)',
             borderColor: 'var(--glass-border)',
@@ -94,8 +91,9 @@ export default async function HomePage() {
           <Button
             size="lg"
             className="rounded-full px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base text-white"
+            asChild
           >
-            Register now — Units Going Fast!
+            <a href="mailto:capitalrealestate254@gmail.com">Register now — Units Going Fast!</a>
           </Button>
         </div>
       </div>
@@ -211,19 +209,23 @@ export default async function HomePage() {
         <h2 className="text-base sm:text-lg md:text-xl font-medium text-primary font-mono drop-shadow-lg">
           Website Launching in:
         </h2>
-        <Countdown targetISO={launchDate.toISOString()} />
+        <Countdown />
 
         {/* Social media icons */}
         <div className="flex items-center gap-3 sm:gap-4 mt-2 sm:mt-4">
           <a
-            href="#"
+            href="https://www.facebook.com/profile.php?id=61578846316409"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center"
             style={{ backgroundColor: 'var(--facebook-blue)' }}
           >
             <FaFacebookF className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/capitalrealestate254/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center"
             style={{
               background: `linear-gradient(45deg, var(--instagram-gradient-start), var(--instagram-gradient-end))`,
@@ -232,18 +234,13 @@ export default async function HomePage() {
             <FaInstagram className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/company/capitalrealestateke"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center"
             style={{ backgroundColor: 'var(--linkedin-blue)' }}
           >
             <FaLinkedinIn className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-          </a>
-          <a
-            href="#"
-            className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center"
-            style={{ backgroundColor: 'var(--tiktok-black)' }}
-          >
-            <FaTiktok className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
           </a>
         </div>
       </div>
