@@ -93,134 +93,78 @@ export default async function HomePage() {
       </div>
 
       <div className="absolute top-3 left-3 sm:top-6 sm:left-6 flex flex-col items-center gap-1 sm:gap-2">
-        <div
-          className="flex flex-col items-center justify-center gap-1 sm:gap-2 w-28 h-18 sm:w-36 sm:h-24 p-2 sm:p-3 rounded-lg sm:rounded-xl border backdrop-blur-sm"
-          style={{
-            background: 'var(--glass-navy-bg)',
-            borderColor: 'var(--glass-navy-border)',
-            backdropFilter: 'var(--glass-navy-backdrop)',
-          }}
-        >
-          <div className="flex justify-center">
-            <Image
-              src="/cre-logos/logo_capital_vista.webp"
-              alt="Capital Vista Logo"
-              width={16}
-              height={16}
-              className="sm:w-5 sm:h-5"
-            />
+        <Image
+          src="/cre-logos/logo_capital_vista.webp"
+          alt="Capital Vista Logo"
+          width={16}
+          height={16}
+          className="sm:w-5 sm:h-5"
+        />
+        <div className="text-center">
+          <div className="text-xs sm:text-sm md:text-base font-medium sm:font-semibold text-white text-outline font-revivalism">
+            Capital Vista
           </div>
-          <div className="text-center">
-            <div
-              className="text-xs font-medium sm:font-semibold text-white drop-shadow-lg"
-              style={{ fontFamily: 'Revivalism' }}
-            >
-              Capital Vista
-            </div>
-            <div className="flex justify-center">
-              <Badge className="hidden sm:block bg-primary text-primary-foreground text-xs">
-                Newly Launched
-              </Badge>
-            </div>
+          <div className="flex justify-center">
+            <Badge className="hidden sm:block bg-primary text-primary-foreground text-xs">
+              Newly Launched
+            </Badge>
           </div>
         </div>
       </div>
       <div className="absolute top-3 right-3 sm:top-6 sm:right-6 flex flex-col items-center gap-1 sm:gap-2">
-        <div
-          className="flex flex-col items-center justify-center gap-1 sm:gap-2 w-28 h-18 sm:w-36 sm:h-24 p-2 sm:p-3 rounded-lg sm:rounded-xl border backdrop-blur-sm"
-          style={{
-            background: 'var(--glass-navy-bg)',
-            borderColor: 'var(--glass-navy-border)',
-            backdropFilter: 'var(--glass-navy-backdrop)',
-          }}
-        >
-          <div className="flex justify-center">
-            <Image
-              src="/cre-logos/logo_capital_heights.webp"
-              alt="Capital Heights Logo"
-              width={16}
-              height={16}
-              className="sm:w-5 sm:h-5"
-            />
+        <Image
+          src="/cre-logos/logo_capital_heights.webp"
+          alt="Capital Heights Logo"
+          width={16}
+          height={16}
+          className="sm:w-5 sm:h-5"
+        />
+        <div className="text-center">
+          <div className="text-xs sm:text-sm md:text-base font-medium sm:font-semibold text-white text-outline font-revivalism">
+            Capital Heights
           </div>
-          <div className="text-center">
-            <div
-              className="text-xs font-medium sm:font-semibold text-white drop-shadow-lg"
-              style={{ fontFamily: 'Revivalism' }}
-            >
-              Capital Heights
-            </div>
-            <div className="flex justify-center">
-              <Badge className="hidden sm:block bg-primary text-primary-foreground text-xs">
-                Groundbroken
-              </Badge>
-            </div>
+          <div className="flex justify-center">
+            <Badge className="hidden sm:block bg-primary text-primary-foreground text-xs">
+              Groundbroken
+            </Badge>
           </div>
         </div>
       </div>
       <div className="absolute bottom-40 left-3 sm:bottom-32 sm:left-6 flex flex-col items-center gap-1 sm:gap-2">
-        <div
-          className="flex flex-col items-center justify-center gap-1 sm:gap-2 w-28 h-18 sm:w-36 sm:h-24 p-2 sm:p-3 rounded-lg sm:rounded-xl border backdrop-blur-sm"
-          style={{
-            background: 'var(--glass-navy-bg)',
-            borderColor: 'var(--glass-navy-border)',
-            backdropFilter: 'var(--glass-navy-backdrop)',
-          }}
-        >
-          <div className="flex justify-center">
-            <Image
-              src="/cre-logos/logo_capital_rise.webp"
-              alt="Capital Rise Logo"
-              width={16}
-              height={16}
-              className="sm:w-5 sm:h-5"
-            />
+        <Image
+          src="/cre-logos/logo_capital_rise.webp"
+          alt="Capital Rise Logo"
+          width={16}
+          height={16}
+          className="sm:w-5 sm:h-5"
+        />
+        <div className="text-center">
+          <div className="text-xs sm:text-sm md:text-base font-medium sm:font-semibold text-white text-outline font-revivalism">
+            Capital Rise
           </div>
-          <div className="text-center">
-            <div
-              className="text-xs font-medium sm:font-semibold text-white drop-shadow-lg"
-              style={{ fontFamily: 'Revivalism' }}
-            >
-              Capital Rise
-            </div>
-            <div className="flex justify-center">
-              <Badge className="hidden sm:block bg-primary text-primary-foreground text-xs">
-                Coming Soon
-              </Badge>
-            </div>
+          <div className="flex justify-center">
+            <Badge className="hidden sm:block bg-primary text-primary-foreground text-xs">
+              Coming Soon
+            </Badge>
           </div>
         </div>
       </div>
       <div className="absolute bottom-40 right-3 sm:bottom-32 sm:right-6 flex flex-col items-center gap-1 sm:gap-2">
-        <div
-          className="flex flex-col items-center justify-center gap-1 sm:gap-2 w-28 h-18 sm:w-36 sm:h-24 p-2 sm:p-3 rounded-lg sm:rounded-xl border backdrop-blur-sm"
-          style={{
-            background: 'var(--glass-navy-bg)',
-            borderColor: 'var(--glass-navy-border)',
-            backdropFilter: 'var(--glass-navy-backdrop)',
-          }}
-        >
-          <div className="flex justify-center">
-            <Image
-              src="/cre-logos/logo_capital_garden.webp"
-              alt="Capital Garden Logo"
-              width={16}
-              height={16}
-              className="sm:w-5 sm:h-5"
-            />
+        <Image
+          src="/cre-logos/logo_capital_garden.webp"
+          alt="Capital Garden Logo"
+          width={16}
+          height={16}
+          className="sm:w-5 sm:h-5"
+        />
+        <div className="text-center">
+          <div className="text-xs sm:text-sm md:text-base font-medium sm:font-semibold text-white text-outline font-revivalism">
+            Capital Garden
           </div>
-          <div className="text-center">
-            <div
-              className="text-xs font-medium sm:font-semibold text-white drop-shadow-lg"
-              style={{ fontFamily: 'Revivalism' }}
-            >
-              Capital Garden
-            </div>
-            <div className="flex justify-center">
-              <Badge className="hidden sm:block bg-primary text-primary-foreground text-xs">
-                Preview
-              </Badge>
-            </div>
+          <div className="flex justify-center">
+            <Badge className="hidden sm:block bg-primary text-primary-foreground text-xs">
+              Preview
+            </Badge>
           </div>
         </div>
       </div>
