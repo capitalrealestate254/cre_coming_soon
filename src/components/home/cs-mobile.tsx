@@ -7,7 +7,7 @@ import '@/app/(frontend)/styles.css'
 import Countdown from '@/components/countdown/countdown'
 import ContactFormDialog from '@/components/contact-form-dialog'
 
-export default async function CSMobile() {
+export default function CSMobile() {
   return (
     <div className="relative h-[100vh] w-full overflow-hidden">
       <div className="grid h-full w-full grid-cols-2 grid-rows-2 gap-1 sm:gap-1 md:gap-1">
@@ -16,37 +16,217 @@ export default async function CSMobile() {
             src="/cre-photos/capital_vista.webp"
             alt="Capital Vista"
             fill
-            className="object-cover"
+            className="object-cover brightness-110 contrast-110 saturate-110"
             priority
             sizes="50vw"
           />
+          {/* Mobile Layout */}
+          <div className="md:hidden absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-1 sm:gap-2">
+            <Image
+              src="/cre-logos/logo_capital_vista.webp"
+              alt="Capital Vista"
+              width={56}
+              height={56}
+              className="sm:w-[64px] sm:h-[64px] drop-shadow"
+            />
+            <div
+              className="text-white font-revivalism text-sm sm:text-base"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.6)' }}
+            >
+              Capital Vista
+            </div>
+            <Badge className="bg-primary text-primary-foreground text-xs rounded-full px-2 py-1">
+              Newly Launched
+            </Badge>
+          </div>
+
+          {/* Tablet Layout - Corner Positioning */}
+          <div
+            className="hidden md:flex absolute z-20 flex-col items-start gap-1"
+            style={{
+              top: '8px',
+              left: '8px',
+            }}
+          >
+            <Image
+              src="/cre-logos/logo_capital_vista.webp"
+              alt="Capital Vista"
+              width={48}
+              height={48}
+              className="drop-shadow"
+            />
+            <div
+              className="text-white font-revivalism text-sm"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.6)' }}
+            >
+              Capital Vista
+            </div>
+            <Badge className="bg-primary text-primary-foreground text-xs rounded-full px-2 py-1">
+              Newly Launched
+            </Badge>
+          </div>
         </div>
         <div className="relative min-h-0">
           <Image
             src="/cre-photos/capital_heights.webp"
             alt="Capital Heights"
             fill
-            className="object-cover"
+            className="object-cover brightness-110 contrast-110 saturate-110"
             sizes="50vw"
           />
-        </div>
-        <div className="relative min-h-0">
-          <Image
-            src="/cre-photos/capital_rise.webp"
-            alt="Capital Rise"
-            fill
-            className="object-cover"
-            sizes="50vw"
-          />
+          {/* Mobile Layout */}
+          <div className="md:hidden absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-1 sm:gap-2">
+            <Image
+              src="/cre-logos/logo_capital_heights.webp"
+              alt="Capital Heights"
+              width={56}
+              height={56}
+              className="sm:w-[64px] sm:h-[64px] drop-shadow"
+            />
+            <div
+              className="text-white font-revivalism text-sm sm:text-base"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.6)' }}
+            >
+              Capital Heights
+            </div>
+            <Badge className="bg-primary text-primary-foreground text-xs rounded-full px-2 py-1">
+              Groundbroken
+            </Badge>
+          </div>
+
+          {/* Tablet Layout - Corner Positioning */}
+          <div
+            className="hidden md:flex absolute z-20 flex-col items-end gap-1"
+            style={{
+              top: '8px',
+              right: '8px',
+            }}
+          >
+            <Image
+              src="/cre-logos/logo_capital_heights.webp"
+              alt="Capital Heights"
+              width={48}
+              height={48}
+              className="drop-shadow"
+            />
+            <div
+              className="text-white font-revivalism text-sm"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.6)' }}
+            >
+              Capital Heights
+            </div>
+            <Badge className="bg-primary text-primary-foreground text-xs rounded-full px-2 py-1">
+              Groundbroken
+            </Badge>
+          </div>
         </div>
         <div className="relative min-h-0">
           <Image
             src="/cre-photos/capital_garden.webp"
             alt="Capital Garden"
             fill
-            className="object-cover"
+            className="object-cover brightness-110 contrast-110 saturate-110"
             sizes="50vw"
           />
+          {/* Mobile Layout */}
+          <div className="md:hidden absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-1 sm:gap-2">
+            <Image
+              src="/cre-logos/logo_capital_garden.webp"
+              alt="Capital Garden"
+              width={56}
+              height={56}
+              className="sm:w-[64px] sm:h-[64px] drop-shadow"
+            />
+            <div
+              className="text-white font-revivalism text-sm sm:text-base"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.6)' }}
+            >
+              Capital Garden
+            </div>
+            <Badge className="bg-primary text-primary-foreground text-xs rounded-full px-2 py-1">
+              Showhouse Ready
+            </Badge>
+          </div>
+
+          {/* Tablet Layout - Corner Positioning */}
+          <div
+            className="hidden md:flex absolute z-20 flex-col items-start gap-1"
+            style={{
+              bottom: '8px',
+              left: '8px',
+            }}
+          >
+            <Image
+              src="/cre-logos/logo_capital_garden.webp"
+              alt="Capital Garden"
+              width={48}
+              height={48}
+              className="drop-shadow"
+            />
+            <div
+              className="text-white font-revivalism text-sm"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.6)' }}
+            >
+              Capital Garden
+            </div>
+            <Badge className="bg-primary text-primary-foreground text-xs rounded-full px-2 py-1">
+              Showhouse Ready
+            </Badge>
+          </div>
+        </div>
+        <div className="relative min-h-0">
+          <Image
+            src="/cre-photos/capital_rise.webp"
+            alt="Capital Rise"
+            fill
+            className="object-cover brightness-110 contrast-110 saturate-110"
+            sizes="50vw"
+          />
+          {/* Mobile Layout */}
+          <div className="md:hidden absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-1 sm:gap-2">
+            <Image
+              src="/cre-logos/logo_capital_rise.webp"
+              alt="Capital Rise"
+              width={56}
+              height={56}
+              className="sm:w-[64px] sm:h-[64px] drop-shadow"
+            />
+            <div
+              className="text-white font-revivalism text-sm sm:text-base"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.6)' }}
+            >
+              Capital Rise
+            </div>
+            <Badge className="bg-primary text-primary-foreground text-xs rounded-full px-2 py-1">
+              Completed
+            </Badge>
+          </div>
+
+          {/* Tablet Layout - Corner Positioning */}
+          <div
+            className="hidden md:flex absolute z-20 flex-col items-end gap-1"
+            style={{
+              bottom: '8px',
+              right: '8px',
+            }}
+          >
+            <Image
+              src="/cre-logos/logo_capital_rise.webp"
+              alt="Capital Rise"
+              width={48}
+              height={48}
+              className="drop-shadow"
+            />
+            <div
+              className="text-white font-revivalism text-sm"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.6)' }}
+            >
+              Capital Rise
+            </div>
+            <Badge className="bg-primary text-primary-foreground text-xs rounded-full px-2 py-1">
+              Completed
+            </Badge>
+          </div>
         </div>
       </div>
 
@@ -87,83 +267,6 @@ export default async function CSMobile() {
               Register now — Units Going Fast!
             </Button>
           </ContactFormDialog>
-        </div>
-      </div>
-
-      <div className="absolute top-3 left-3 sm:top-6 sm:left-6 flex flex-col items-center gap-1 sm:gap-2">
-        <Image
-          src="/cre-logos/logo_capital_vista.webp"
-          alt="Capital Vista Logo"
-          width={16}
-          height={16}
-          className="sm:w-5 sm:h-5"
-        />
-        <div className="text-center">
-          <div className="text-xs sm:text-sm md:text-base font-medium sm:font-semibold text-white text-outline font-revivalism">
-            Capital Vista
-          </div>
-          <div className="flex justify-center">
-            <Badge className="hidden sm:block bg-primary text-primary-foreground text-xs">
-              Newly Launched
-            </Badge>
-          </div>
-        </div>
-      </div>
-      <div className="absolute top-3 right-3 sm:top-6 sm:right-6 flex flex-col items-center gap-1 sm:gap-2">
-        <Image
-          src="/cre-logos/logo_capital_heights.webp"
-          alt="Capital Heights Logo"
-          width={16}
-          height={16}
-          className="sm:w-5 sm:h-5"
-        />
-        <div className="text-center">
-          <div className="text-xs sm:text-sm md:text-base font-medium sm:font-semibold text-white text-outline font-revivalism">
-            Capital Heights
-          </div>
-          <div className="flex justify-center">
-            <Badge className="hidden sm:block bg-primary text-primary-foreground text-xs">
-              Groundbroken
-            </Badge>
-          </div>
-        </div>
-      </div>
-      <div className="absolute bottom-40 left-3 sm:bottom-32 sm:left-6 flex flex-col items-center gap-1 sm:gap-2">
-        <Image
-          src="/cre-logos/logo_capital_rise.webp"
-          alt="Capital Rise Logo"
-          width={16}
-          height={16}
-          className="sm:w-5 sm:h-5"
-        />
-        <div className="text-center">
-          <div className="text-xs sm:text-sm md:text-base font-medium sm:font-semibold text-white text-outline font-revivalism">
-            Capital Rise
-          </div>
-          <div className="flex justify-center">
-            <Badge className="hidden sm:block bg-primary text-primary-foreground text-xs">
-              Coming Soon
-            </Badge>
-          </div>
-        </div>
-      </div>
-      <div className="absolute bottom-40 right-3 sm:bottom-32 sm:right-6 flex flex-col items-center gap-1 sm:gap-2">
-        <Image
-          src="/cre-logos/logo_capital_garden.webp"
-          alt="Capital Garden Logo"
-          width={16}
-          height={16}
-          className="sm:w-5 sm:h-5"
-        />
-        <div className="text-center">
-          <div className="text-xs sm:text-sm md:text-base font-medium sm:font-semibold text-white text-outline font-revivalism">
-            Capital Garden
-          </div>
-          <div className="flex justify-center">
-            <Badge className="hidden sm:block bg-primary text-primary-foreground text-xs">
-              Preview
-            </Badge>
-          </div>
         </div>
       </div>
 
