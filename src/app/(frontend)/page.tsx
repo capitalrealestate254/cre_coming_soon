@@ -7,13 +7,12 @@ import { Button } from '@/components/ui/button'
 import './styles.css'
 
 import Countdown from '@/components/countdown/countdown'
+import ContactFormDialog from '@/components/contact-form-dialog'
 
 export default async function HomePage() {
   return (
     <div className="relative h-[100vh] w-full overflow-hidden">
-      {/* Background 2x2 grid */}
-      <div className="grid h-full w-full grid-cols-2 grid-rows-2">
-        {/* TL - Capital Vista */}
+      <div className="grid h-full w-full grid-cols-2 grid-rows-2 gap-1 sm:gap-1 md:gap-1">
         <div className="relative min-h-0">
           <Image
             src="/cre-photos/capital_vista.webp"
@@ -24,7 +23,6 @@ export default async function HomePage() {
             sizes="50vw"
           />
         </div>
-        {/* TR - Capital Heights */}
         <div className="relative min-h-0">
           <Image
             src="/cre-photos/capital_heights.webp"
@@ -34,7 +32,6 @@ export default async function HomePage() {
             sizes="50vw"
           />
         </div>
-        {/* BL - Capital Rise */}
         <div className="relative min-h-0">
           <Image
             src="/cre-photos/capital_rise.webp"
@@ -44,7 +41,6 @@ export default async function HomePage() {
             sizes="50vw"
           />
         </div>
-        {/* BR - Capital Garden */}
         <div className="relative min-h-0">
           <Image
             src="/cre-photos/capital_garden.webp"
@@ -56,22 +52,20 @@ export default async function HomePage() {
         </div>
       </div>
 
-      {/* Gradient overlay and decorative border */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{ background: 'var(--gradient-light-dark)' }}
       />
 
-      {/* Bottom dark vignette */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-64 sm:h-72 md:h-80 bg-gradient-to-t from-black/90 via-black/70 to-transparent" />
 
-      {/* Main content with glassmorphism - centered on mobile/tablet, top on desktop */}
-      <div className="absolute inset-0 lg:inset-x-0 lg:top-6 lg:h-1/2 flex flex-col items-center justify-center gap-2 sm:gap-3 px-3 sm:px-6 text-center">
+      <div className="absolute inset-0 bottom-40 sm:bottom-32 md:top-20 md:bottom-32 lg:inset-x-0 lg:top-6 lg:bottom-auto lg:h-1/2 flex flex-col items-center justify-center gap-2 sm:gap-3 px-3 sm:px-6 text-center">
         <div
-          className="w-full max-w-[95%] sm:max-w-3xl p-4 sm:p-6 rounded-xl sm:rounded-2xl border backdrop-blur-md mb-4 md:mb-8"
+          className="w-full max-w-[75%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-3xl p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg sm:rounded-xl md:rounded-2xl border backdrop-blur-md mb-4 md:mb-8"
           style={{
             background: 'var(--glass-bg)',
-            borderColor: 'var(--glass-border)',
+            border: '2px solid',
+            borderColor: 'var(--brand-gold)',
             backdropFilter: 'var(--glass-backdrop)',
           }}
         >
@@ -80,25 +74,24 @@ export default async function HomePage() {
             alt="Capital Real Estate"
             width={200}
             height={70}
-            className="mx-auto h-auto w-[140px] sm:w-[200px] mb-2 sm:mb-3"
+            className="mx-auto h-auto w-[80px] sm:w-[100px] md:w-[120px] lg:w-[160px] mb-1 sm:mb-2"
             priority
           />
-          <h1 className="mx-auto max-w-[800px] text-base sm:text-lg md:text-xl lg:text-2xl font-medium tracking-tight drop-shadow-[0_1px_8px_rgba(255,255,255,0.8)] mb-2 sm:mb-3 leading-tight text-foreground">
+          <h1 className="mx-auto max-w-[800px] text-xs sm:text-sm md:text-base lg:text-lg font-medium tracking-tight drop-shadow-[0_1px_8px_rgba(255,255,255,0.8)] mb-1 sm:mb-2 leading-tight text-foreground">
             Secure Your Front-Row Seat to Nairobi&apos;s Next Landmark Residences — Capital Vista &
             Capital Heights.
           </h1>
-          <Button
-            size="lg"
-            className="rounded-full px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base text-foreground"
-            asChild
-          >
-            <a href="mailto:capitalrealestate254@gmail.com">Register now — Units Going Fast!</a>
-          </Button>
+          <ContactFormDialog>
+            <Button
+              size="sm"
+              className="rounded-full px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 text-xs sm:text-sm text-foreground"
+            >
+              Register now — Units Going Fast!
+            </Button>
+          </ContactFormDialog>
         </div>
       </div>
 
-      {/* Project badges in corners */}
-      {/* TL - Capital Vista */}
       <div className="absolute top-3 left-3 sm:top-6 sm:left-6 flex flex-col items-center gap-1 sm:gap-2">
         <div
           className="flex flex-col items-center justify-center gap-1 sm:gap-2 w-28 h-18 sm:w-36 sm:h-24 p-2 sm:p-3 rounded-lg sm:rounded-xl border backdrop-blur-sm"
@@ -118,7 +111,10 @@ export default async function HomePage() {
             />
           </div>
           <div className="text-center">
-            <div className="text-xs font-medium sm:font-semibold text-white drop-shadow-lg">
+            <div
+              className="text-xs font-medium sm:font-semibold text-white drop-shadow-lg"
+              style={{ fontFamily: 'Revivalism' }}
+            >
               Capital Vista
             </div>
             <div className="flex justify-center">
@@ -129,7 +125,6 @@ export default async function HomePage() {
           </div>
         </div>
       </div>
-      {/* TR - Capital Heights */}
       <div className="absolute top-3 right-3 sm:top-6 sm:right-6 flex flex-col items-center gap-1 sm:gap-2">
         <div
           className="flex flex-col items-center justify-center gap-1 sm:gap-2 w-28 h-18 sm:w-36 sm:h-24 p-2 sm:p-3 rounded-lg sm:rounded-xl border backdrop-blur-sm"
@@ -149,7 +144,10 @@ export default async function HomePage() {
             />
           </div>
           <div className="text-center">
-            <div className="text-xs font-medium sm:font-semibold text-white drop-shadow-lg">
+            <div
+              className="text-xs font-medium sm:font-semibold text-white drop-shadow-lg"
+              style={{ fontFamily: 'Revivalism' }}
+            >
               Capital Heights
             </div>
             <div className="flex justify-center">
@@ -160,8 +158,7 @@ export default async function HomePage() {
           </div>
         </div>
       </div>
-      {/* BL - Capital Rise */}
-      <div className="absolute bottom-32 left-3 sm:bottom-6 sm:left-6 flex flex-col items-center gap-1 sm:gap-2">
+      <div className="absolute bottom-40 left-3 sm:bottom-32 sm:left-6 flex flex-col items-center gap-1 sm:gap-2">
         <div
           className="flex flex-col items-center justify-center gap-1 sm:gap-2 w-28 h-18 sm:w-36 sm:h-24 p-2 sm:p-3 rounded-lg sm:rounded-xl border backdrop-blur-sm"
           style={{
@@ -180,7 +177,10 @@ export default async function HomePage() {
             />
           </div>
           <div className="text-center">
-            <div className="text-xs font-medium sm:font-semibold text-white drop-shadow-lg">
+            <div
+              className="text-xs font-medium sm:font-semibold text-white drop-shadow-lg"
+              style={{ fontFamily: 'Revivalism' }}
+            >
               Capital Rise
             </div>
             <div className="flex justify-center">
@@ -191,8 +191,7 @@ export default async function HomePage() {
           </div>
         </div>
       </div>
-      {/* BR - Capital Garden */}
-      <div className="absolute bottom-32 right-3 sm:bottom-6 sm:right-6 flex flex-col items-center gap-1 sm:gap-2">
+      <div className="absolute bottom-40 right-3 sm:bottom-32 sm:right-6 flex flex-col items-center gap-1 sm:gap-2">
         <div
           className="flex flex-col items-center justify-center gap-1 sm:gap-2 w-28 h-18 sm:w-36 sm:h-24 p-2 sm:p-3 rounded-lg sm:rounded-xl border backdrop-blur-sm"
           style={{
@@ -211,7 +210,10 @@ export default async function HomePage() {
             />
           </div>
           <div className="text-center">
-            <div className="text-xs font-medium sm:font-semibold text-white drop-shadow-lg">
+            <div
+              className="text-xs font-medium sm:font-semibold text-white drop-shadow-lg"
+              style={{ fontFamily: 'Revivalism' }}
+            >
               Capital Garden
             </div>
             <div className="flex justify-center">
@@ -223,14 +225,15 @@ export default async function HomePage() {
         </div>
       </div>
 
-      {/* Bottom countdown */}
       <div className="absolute inset-x-0 bottom-3 sm:bottom-6 flex flex-col items-center gap-2 sm:gap-3 px-3 sm:px-6 text-center z-10">
-        <h2 className="text-base sm:text-lg md:text-xl font-medium text-primary font-mono drop-shadow-lg">
+        <h2
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-primary drop-shadow-lg"
+          style={{ fontFamily: 'Revivalism' }}
+        >
           Website Launching in:
         </h2>
         <Countdown />
 
-        {/* Social media icons */}
         <div className="flex items-center gap-3 sm:gap-4 mt-2 sm:mt-4">
           <a
             href="https://www.facebook.com/profile.php?id=61578846316409"

@@ -70,7 +70,6 @@ export default function Countdown(props: CountdownProps) {
     setTargetDate(null)
   }, [targetISO, durationMs, storageKey])
 
-  // Auto-fetch canonical global countdown target if no props provided
   useEffect(() => {
     if (targetISO || typeof durationMs === 'number') return
     let aborted = false
@@ -85,7 +84,7 @@ export default function Countdown(props: CountdownProps) {
         setServerOffsetMs(serverNow - clientNow)
         setTargetDate(new Date(data.targetISO))
       } catch {
-        // Ignore fetch errors; component will render zeros
+        // Ignore fetch errors; the component will render zeros
       }
     }
     run()
@@ -123,11 +122,15 @@ export default function Countdown(props: CountdownProps) {
     <div className="flex items-baseline gap-1">
       <div
         suppressHydrationWarning
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tabular-nums text-primary drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)] font-mono"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tabular-nums text-primary drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]"
+        style={{ fontFamily: 'Revivalism' }}
       >
         {value.toString().padStart(2, '0')}
       </div>
-      <div className="text-xs sm:text-sm md:text-base text-white font-medium uppercase tracking-wider font-mono">
+      <div
+        className="text-xs sm:text-sm md:text-base text-white font-medium uppercase tracking-wider"
+        style={{ fontFamily: 'Revivalism' }}
+      >
         {label.charAt(0)}
       </div>
     </div>

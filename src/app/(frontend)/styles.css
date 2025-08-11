@@ -3,26 +3,39 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: 'Revivalism';
+  src: url('/fonts/REVIVALISEM-REGULAR.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Revivalism';
+  src: url('/fonts/REVIVALISEM-ITALIC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --font-mono:
     'Geist Mono', ui-monospace, SFMono-Regular, 'SF Mono', Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;
   --radius: 0.625rem;
 
-  /* Brand palette */
   --brand-navy: oklch(0.27 0.06 270);
   --brand-navy-900: oklch(0.21 0.05 270);
   --brand-gold: oklch(0.78 0.16 85);
   --brand-cream: oklch(0.98 0.02 95);
 
-  /* Social media colors */
   --facebook-blue: #1877f2;
   --instagram-gradient-start: #f09433;
   --instagram-gradient-end: #bc1888;
   --linkedin-blue: #0077b5;
   --tiktok-black: #000000;
 
-  /* Gradient overlays */
   --gradient-light-dark: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.2),
@@ -31,17 +44,14 @@
   );
   --overlay-dark: rgba(0, 0, 0, 0.35);
 
-  /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.4);
   --glass-border: rgba(255, 255, 255, 0.2);
-  --glass-backdrop: blur(10px);
+  --glass-backdrop: blur(3px);
 
-  /* Navy Glassmorphism for badges */
   --glass-navy-bg: rgba(39, 48, 122, 0.2);
   --glass-navy-border: rgba(39, 48, 122, 0.3);
   --glass-navy-backdrop: blur(8px);
 
-  /* App tokens */
   --background: var(--brand-cream);
   --foreground: var(--brand-navy);
   --card: var(--brand-cream);
