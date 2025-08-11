@@ -83,14 +83,14 @@ export default async function HomePage() {
             className="mx-auto h-auto w-[140px] sm:w-[200px] mb-2 sm:mb-3"
             priority
           />
-          <h1 className="mx-auto max-w-[800px] text-base sm:text-lg md:text-xl lg:text-2xl font-medium tracking-tight text-foreground drop-shadow-[0_1px_8px_rgba(255,255,255,0.8)] mb-2 sm:mb-3 leading-tight">
+          <h1 className="mx-auto max-w-[800px] text-base sm:text-lg md:text-xl lg:text-2xl font-medium tracking-tight drop-shadow-[0_1px_8px_rgba(255,255,255,0.8)] mb-2 sm:mb-3 leading-tight text-white">
             Secure Your Front-Row Seat to Nairobi&apos;s Next Landmark Residences —
-            <span className="text-foreground"> Capital Vista</span> &
-            <span className="text-foreground"> Capital Heights</span>.
+            <span className="text-white"> Capital Vista</span> &
+            <span className="text-white"> Capital Heights</span>.
           </h1>
           <Button
             size="lg"
-            className="rounded-full px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base text-white"
+            className="rounded-full px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base text-foreground"
             asChild
           >
             <a href="mailto:capitalrealestate254@gmail.com">Register now — Units Going Fast!</a>
