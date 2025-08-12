@@ -18,6 +18,7 @@
     "test:int": "cross-env NODE_OPTIONS=--no-deprecation vitest run --config ./vitest.config.mts"
   },
   "dependencies": {
+    "@getbrevo/brevo": "^3.0.1",
     "@hookform/resolvers": "^5.2.1",
     "@payloadcms/db-mongodb": "3.50.0",
     "@payloadcms/next": "3.50.0",
